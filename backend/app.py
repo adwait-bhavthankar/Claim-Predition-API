@@ -27,6 +27,7 @@ def predict():
         # Convert categorical values to numeric (same as in training)
         df["policy_type"] = df["policy_type"].map({"comprehensive": 1, "third-party": 0})
         df["vehicle_damage"] = df["vehicle_damage"].map({"Yes": 1, "No": 0})
+        
 
         # Ensure correct order of features
         features = ["age", "policy_type", "previous_claims", "vehicle_damage"]
